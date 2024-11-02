@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    perspective: 1200px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    transform: rotateY(15deg);
+    margin-bottom: 10px; /* Reduced spacing below title */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap between buttons */
+    margin-bottom: 5px; /* Further reduced space below buttons */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px; /* Reduced gap between cells */
+    margin: 0 auto 10px; /* Center the board with reduced margin below */
+    transform: translateZ(30px);
+    padding: 0 50px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    border: 2px solid #00796b;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    background-color: #b2dfdb;
+    transform: scale(1.1) rotateY(10deg);
+}
+
+.animated-button {
+    margin: 5px;
+    padding: 8px 15px; /* Adjusted padding for a smaller button */
+    font-size: 1.1em; /* Slightly reduced font size */
+    border: none;
+    border-radius: 5px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.animated-button:hover {
+    background-color: #004d40;
+    transform: translateY(-5px) rotateX(5deg);
+}
+
+#message {
+    margin: 5px 0; /* Reduced margin above and below message */
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#stats {
+    margin-top: 10px; /* Reduced space above stats */
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#reset {
+    margin: 10px auto; /* Center the reset button with auto margin */
+    display: block; /* Ensure reset button is displayed as a block element */
+}
